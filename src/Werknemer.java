@@ -1,16 +1,18 @@
 import java.util.ArrayList;
 
-class Werknemer {
+class Werkkracht {
     private String naam;
     private Integer code;
-    private static Integer geboortedatum;
+    private Integer bsn;
+    private Integer telefoonnummer;
     public static Integer Newcode = 1987;
-    public static ArrayList<Werknemer> werknemers = new ArrayList<>();
+    public static ArrayList<Werkkracht> werknemers = new ArrayList<>();
 
-    public Werknemer(String naam, Integer geboortedatum, Integer code) {
+    public Werkkracht(String naam, Integer code, Integer telefoonnummer, Integer bsn) {
         this.naam = naam;
-        this.geboortedatum = geboortedatum;
         this.code = code;
+        this.telefoonnummer = telefoonnummer;
+        this.bsn = bsn;
     }
 
     public String toString() {
@@ -19,11 +21,13 @@ class Werknemer {
 
     public String getNaam() {
         return this.naam;
+    }
+    public Integer getBsn(){
+        return this.bsn;
 
     }
-
-    public Integer getGeboortedatum() {
-        return geboortedatum;
+    public Integer getTelefoonnummer(){
+        return this.telefoonnummer;
     }
 
     public Integer getCode() {
@@ -33,17 +37,5 @@ class Werknemer {
     public static Integer getNewCode() {
         Newcode += 87;
         return Newcode;
-    }
-
-    public void Medewerkersopslaan() {
-        Werknemer naam1 = new Werknemer("Lisa", 1263, 209);
-        werknemers.add(naam1);
-        Werknemer naam2 = new Werknemer("Test", 0601, 1976);
-        werknemers.add(naam2);
-        Werknemer naam3 = new Werknemer("Olaf", 0206, 1999);
-        werknemers.add(naam3);
-        Werknemer naam4 = new Werknemer("Diderik", 1209, 2008);
-        werknemers.add(naam4);
-
     }
 }
