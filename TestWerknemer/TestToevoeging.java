@@ -12,4 +12,8 @@ public class TestToevoeging {
             Werknemer.werknemers.add(aanmaken1);
             Assertions.assertTrue(Werknemer.werknemers.size() == 1);
     }
+    @Test
+    public void TestwerknemerToegevoegd(){
+
+    }
 }
